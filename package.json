@@ -1,0 +1,24 @@
+{
+  "name": "ts-multipick",
+  "version": "1.0.0",
+  "description": "TypeScript Pick utility, but deeper: Pick2, Pick3, Pick4, ...",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/ts-multipick.git"
+  },
+  "types": "index.d.ts",
+  "author": "staltz.com",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "pick"
+  ],
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "should-fail": "tsc --noEmit --project should-fail.json || status=$?; if [ $status -eq 1 ]; then echo \"PASSED\"; else echo \"FAILED\"; fi;",
+    "should-pass": "tsc --noEmit --project should-pass.json && echo \"PASSED\"",
+    "test": "npm run should-fail && npm run should-pass"
+  }
+}
